@@ -1,0 +1,115 @@
+/* Design tokens Komot — voir le design system "Urban Komot" v1.0.
+   Mode clair par défaut, mode sombre sous :root[data-theme="dark"]. */
+
+:root {
+  /* Couleurs de marque (constantes, indépendantes du thème) */
+  --brand-yellow: #ffc300;
+  --brand-amber: #e6a800;
+  --brand-orange: #ff6b2c;
+  --brand-magenta: #e91e63;
+  --brand-green: #00e676;
+
+  /* Mode clair (par défaut) */
+  --bg-primary: #fffaf5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f5f5f7;
+  --bg-elevated: #ffffff;
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+  --text-primary: #1a1a1a;
+  --text-secondary: #636366;
+  --text-tertiary: #8e8e93;
+  --text-disabled: #d1d1d6;
+  --text-inverse: #ffffff;
+  --border-default: #e5e5ea;
+  --border-strong: #d1d1d6;
+  --accent-primary: #e6a800;
+  --accent-secondary: #ff6b2c;
+  --accent-tertiary: #e91e63;
+  --success: #00c853;
+  --warning: #e6a800;
+  --error: #d32f2f;
+  --info: #0d6efd;
+
+  --gradient-komot: linear-gradient(135deg, #e6a800 0%, #ff6b2c 100%);
+  --gradient-neon: linear-gradient(135deg, #e91e63 0%, #ff6b2c 100%);
+
+  /* Espacements (base 4px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Rayons */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Ombres */
+  --elevation-1: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --elevation-2: 0 2px 4px rgba(0, 0, 0, 0.12);
+  --elevation-3: 0 4px 8px rgba(0, 0, 0, 0.16);
+  --elevation-4: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --shadow-komot: 0 4px 16px rgba(230, 168, 0, 0.2);
+}
+
+:root[data-theme='dark'] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2c2c2e;
+  --bg-elevated: #3a3a3c;
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0b8;
+  --text-tertiary: #636366;
+  --text-disabled: #3a3a3c;
+  --text-inverse: #1a1a1a;
+  --border-default: #2c2c2e;
+  --border-strong: #3a3a3c;
+  --accent-primary: #ffc300;
+  --accent-secondary: #ff6b2c;
+  --accent-tertiary: #e91e63;
+  --success: #00e676;
+  --warning: #ffc300;
+  --error: #ff3b30;
+  --info: #4a9eff;
+
+  --gradient-komot: linear-gradient(135deg, #ffc300 0%, #ff6b2c 100%);
+  --shadow-komot: 0 4px 16px rgba(255, 195, 0, 0.2);
+}
+
+/* Si l'utilisateur n'a jamais choisi et que le système est sombre */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #2c2c2e;
+    --bg-elevated: #3a3a3c;
+    --bg-overlay: rgba(0, 0, 0, 0.6);
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0b8;
+    --text-tertiary: #636366;
+    --text-disabled: #3a3a3c;
+    --text-inverse: #1a1a1a;
+    --border-default: #2c2c2e;
+    --border-strong: #3a3a3c;
+    --accent-primary: #ffc300;
+    --accent-secondary: #ff6b2c;
+    --accent-tertiary: #e91e63;
+    --success: #00e676;
+    --warning: #ffc300;
+    --error: #ff3b30;
+    --info: #4a9eff;
+    --gradient-komot: linear-gradient(135deg, #ffc300 0%, #ff6b2c 100%);
+    --shadow-komot: 0 4px 16px rgba(255, 195, 0, 0.2);
+  }
+}
